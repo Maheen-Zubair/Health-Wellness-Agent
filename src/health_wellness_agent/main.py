@@ -25,6 +25,11 @@ Guidelines for every response:
 - Use clean and simple formatting.
 - Never return empty brackets or unnecessary data like {}.
 - If user asks for a plan (e.g., 7-day meal plan), give it in a neat day-wise format.
+
+**Use handoff() when appropriate**, for example:
+- If the user mentions injury or pain → hand off to InjurySupportAgent
+- If the user requests human help or says "I want to talk to someone" → hand off to EscalationAgent
+- If the user has dietary conditions like diabetes or allergies → hand off to NutritionExpertAgent
 """,
     tools=[
         meal_planner,
